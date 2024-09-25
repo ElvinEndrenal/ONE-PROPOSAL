@@ -19,13 +19,13 @@
 .logo {
     position: absolute; 
     top: 50%; 
-    left: 5%; 
+    left: 10%; 
     transform: translateY(-50%); 
 }
 
 .navbar ul {
     float: right;
-    margin-right: 100px;
+    margin-right: 150px;
 }
 
 .navbar ul li {
@@ -34,16 +34,33 @@
     margin: 0 5px;
 }
 
-.navbar ul li a {
+.nav-item {
     color: #1f1f1f;
     font-size: 17px;
     padding: 7px 25px;
+    transition: color 0.3s; 
+}
+.main a {
+    display: inline-block; /* Makes the link behave like a button */
+    background-color: #717171; /* Background color */
+    color: white; /* Text color */
+    height: 35px; /* Fixed height */
+    line-height: 22px; /* Match line-height to height for vertical centering */
+    border-radius: 20px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition */
+    padding: 7px 25px;
+    font-size: 17px;
 }
 
-.navbar ul li a:hover {
-    color: #31c7cc;
-    transition: 0.4s;
+.nav-item:hover {
+    color: #008cff;
 }
+
+.main a:hover {
+    background-color: #008cff;
+}
+
 
 
 .checkbtn {
@@ -60,6 +77,8 @@
 #check {
     display: none; 
 }
+
+/* Responsiveness */
 
 @media (max-width: 768px) {
     .checkbtn {

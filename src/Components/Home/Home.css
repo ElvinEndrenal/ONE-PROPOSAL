@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* centers the div */
+
+.home-layer {
+    position: relative;
+    background-color: #008cff;
+    height: 800px;
+    width: 100%;
+    display: flex;             
+    justify-content: center;   
+    align-items: center;    
+}
+
+
+.home-section {
+    padding: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    max-width: 700px; 
+    padding-top: 400px; 
+    margin-top: -400px;  
+}
+
+.home-section h2 {
+    font-size: 65px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #f1f1f1;
+}
+
+.home-section p {
+    font-size: 19px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #f1f1f1;
+}
+
+.home-section span {
+    text-decoration: underline;
+}

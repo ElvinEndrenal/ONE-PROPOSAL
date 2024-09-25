@@ -11,10 +11,9 @@ const Navbar = () => {
         </label>
         <img className="logo" src="src/assets/logo.png" width={200}/>
         <ul>
-            <li className="nav-item"><a href="#">Home</a></li>
-            <li className="nav-item"><a href="#">About</a></li>
-            <li className="nav-item"><a href="#">News</a></li>
-            <li className="nav-item"><a href="#">Proposal</a></li>
+            <li><a className='nav-item' href="#">About</a></li>
+            <li><a className='nav-item' href="#">News</a></li>
+            <li className="main"><a href="#">Submit Now</a></li>
         </ul>
       </div>
     </div>
