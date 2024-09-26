@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* -------------------------- */
+
+:root{
+    --blue:#008cff;
+    --white:hsl(0, 0%, 100%);
+    --black:#2e2e2e;
+}
+
+/* FONT STYLE */
+.fontStyle1{
+    font-family: Arial;
+}
+.fontStyle2{
+    font-family: Verdana;
+}
+
+/* FONT SIZE */
+.fontSizeS{
+    font-size: small;   
+}
+.fontSizeXL{
+    font-size: xx-large;   
+}
+
+/* FONT COLOR */
+.fontColor1{
+    color: var(--blue);
+}
+.fontColor2{
+    color: var(--black);
+}
+
+
+
+.mt{
+    margin-top: 30px;
+}
+
+#subHead{
+    margin-top: 25px;
+}
+
+#emaiLTextBox{
+    margin-top: 40px;
+}
+
+.button{
+    width: 45%;
+    height: 50px;
+    border: none;
+    background-color: var(--blue);
+    color:var(--white);
+    border-radius: 15px;
+}
+
+/* -------------------------- */
+
+
+
+
+#background {
+    background-position: center;
+    background-size: cover; 
+    height: 100vh;          
+    width: 100vw;           
+    object-fit: cover;     
+    overflow: hidden;       
+}
+
+#logo{
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    width: 150px;
+}
+
+/* FONT SIZE */
+.fontSizeL{
+    font-size: large;   
+}
+
+.fontSizeM{
+    font-size: medium;   
+}
+
+/* LOGIN CONTAINER */
+#regisBox{ 
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    padding-top: 20px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    border-radius: 50px;
+    opacity: 0.60;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+#head{
+    margin-top: 10px;
+}
+
+.headLogin{
+    font-size: 35px;
+}
+.subLogin{
+    margin-top: -10px;
+}
+
+/* TEXTBOX */
+.textBox{
+    width: 75%;
+    height: 50px;
+    padding-left: 20px;
+    border: solid;
+    border-width: 0.5px;
+    border-color: var(--black);
+    border-radius: 15px;
+}
+
+/* SIGNIN CONTAINER */
+#regisBox2{ 
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    padding-top: 20px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    border-radius: 50px;
+    opacity: 0.60;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+
+}
+
+
+
+#goToSignIn{
+    margin-top: 20px;
+}
+#backToLogin{
+    margin-top: 20px;
+}
+
+
+#goToSignIn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#backToLogin:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width:767px ){
+    #regisBox{ 
+        position: absolute;
+        width: 290px;
+        height: 400px;
+        padding-top: 20px;
+        background-color: rgb(255, 255, 255);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+        border-radius: 50px;
+        opacity: 0.60;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    }
+    .headLogin{
+        font-size: 30px;
+    }
+    .fontSizeL{
+        font-size: 15px;
+    }
+    .textBox{
+        width: 75%;
+        height: 45px;
+        padding-left: 20px;
+        border: solid;
+        border-width: 0.5px;
+        border-color: var(--black);
+        border-radius: 15px;
+    }
+    .fontSizeM{
+        font-size: 13px;   
+    }
+    #logo{
+        width: 120px;
+    }
+}

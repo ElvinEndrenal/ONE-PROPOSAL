@@ -4,7 +4,7 @@ import "./About.css"
 function About() {
   return (
     <div className='about-layer'>
-       <section id="about" className="about-section">
+        <section id="about" className="about-section">
         <h2>How does ONE works?</h2>
         <p>
         ONE makes it easy for people to submit 
