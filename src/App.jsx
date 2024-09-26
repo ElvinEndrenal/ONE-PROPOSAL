@@ -1,20 +1,29 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; 
 import Navbar from './Components/Navbar/Navbar';
-import Home from './Components/Home/Home'
-import About from './Components/About/About'
-import Card_About from './Components/Card_About/Card'
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
+import Card_About from './Components/Card_About/Card';
 import LogIn from './Components/Pages/LogIn/LogIn';
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Card_About/>
-      {/* <LogIn /> */}
-    </div>
-  )
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <Home />
+              <About />
+              <Card_About />
+            </>
+          } />
+          <Route path="/login" element={<LogIn />} /> {/* goes to the LogIn&SignUp page */}
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

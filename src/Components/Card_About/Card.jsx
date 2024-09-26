@@ -4,7 +4,7 @@ import "./Card.css"
 function Card() {
   return (
     <div>
-      <main class="cards">
+      <main id="cards" class="cards">
             <div class="card">
               <h2> </h2>
               <p>

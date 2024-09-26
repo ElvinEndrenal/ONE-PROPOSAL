@@ -10,7 +10,7 @@
 .home-layer {
     position: relative;
     background-color: #008cff;
-    height: 800px;
+    min-height: 800px;
     width: 100%;
     display: flex;             
     justify-content: center;   

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './LogIn.css';
 
+
 const LogIn = () => {
 
     useEffect(() => {
@@ -55,7 +56,7 @@ const LogIn = () => {
                     <p className="fontStyle1 fontSizeM fontColor1" id="backToLogin">Already have an Account</p>
                 </div>
             </center>
-
+            
             <img id="logo" src="../src/assets/logo.png" alt="Logo" />
             <img id="background" src="../src/assets/whiteBg.png" alt="Background" />
         </div>
