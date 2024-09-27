@@ -5,13 +5,14 @@
     box-sizing: border-box;
 }
 
-/* centers the div */
 
+/* centers the div */
 .home-layer {
-    position: relative;
-    background-color: #008cff;
-    min-height: 800px;
-    width: 100%;
+    background-image: url('../src/assets/whiteBg.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;          
+    width: 100vw;           
     display: flex;             
     justify-content: center;   
     align-items: center;    
@@ -24,7 +25,7 @@
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 500;
     max-width: 700px; 
-    padding-top: 400px; 
+    padding-top: 500px; 
     margin-top: -400px;  
 }
 
@@ -32,7 +33,7 @@
     font-size: 65px;
     margin-bottom: 15px;
     font-weight: 600;
-    color: #f1f1f1;
+    color: #717171;
 }
 
 .home-section p {
@@ -40,9 +41,9 @@
     margin-bottom: 10px;
     line-height: 1.5;
     font-weight: 350;
-    color: #f1f1f1;
+    color: #717171;
 }
 
 .home-section span {
-    font-weight: 900;
+    color: #008cff;
 }

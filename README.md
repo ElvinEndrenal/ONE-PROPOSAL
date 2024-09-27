@@ -12,7 +12,7 @@
 - IDE: https://code.visualstudio.com/download
 - Live Server: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 - React Snippet: https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
-- Tailwind: https://tailwindcss.com/docs/installation
+- vitejs.dev: https://vitejs.dev
 
 > Resources
 - Icons: https://fontawesome.com/

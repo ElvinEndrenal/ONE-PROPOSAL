@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Card_About from './Components/Card_About/Card';
 import LogIn from './Components/Pages/LogIn/LogIn';
+import Commitment from './Components/Commitment/Commitment';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
             <>
               <Navbar />
               <Home />
+              <Commitment />
               <About />
               <Card_About />
             </>

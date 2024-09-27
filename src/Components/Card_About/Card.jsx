@@ -23,6 +23,12 @@ function Card() {
               
               </p>
             </div>
+            <div class="card">
+              <h2> </h2>
+              <p>
+              
+              </p>
+            </div>
         </main>
     </div>
   )

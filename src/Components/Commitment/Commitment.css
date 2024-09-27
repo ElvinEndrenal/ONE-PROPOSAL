@@ -1,0 +1,65 @@
+.commitment-layer {
+    position: relative;
+    background-color: #fdfdfd;
+    width: 100%;
+    justify-content: center;
+    min-height: 812px;
+  }
+  
+  .commitment-section {
+    padding: 20px;
+    color: #717171;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    max-width: 700px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start;
+    min-height: 1000px; 
+    padding-top: 450px; 
+    margin-top: -350px;  
+  }
+  
+  .commitment-section h1 {
+    font-size: 47px;
+    margin: 0; 
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .commitment-section p {
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 350;
+  }
+  
+  .commitment-subtext {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  .commitment-subtext li {
+    margin-top: 30px;
+    position: relative; 
+    padding-left: 30px; 
+    margin-bottom: 10px; 
+    font-size: 25px; 
+    line-height: 1.6;
+  }
+  
+  .commitment-subtext li::before {
+    content: '>'; 
+    position: absolute; 
+    left: 0; 
+    color: #008cff;
+    font-size: 27px; 
+    line-height: 1.6; 
+  }
+
+  .commitment-section span {
+    color: #008cff;
+  }

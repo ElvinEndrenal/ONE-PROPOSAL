@@ -3,6 +3,14 @@ html {
   }
 
 
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
   /* Responsiveness */
 
 @media (max-width: 768px) {

@@ -10,10 +10,10 @@ const Navbar = () => {
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <img className="logo" src="src/assets/logo.png" width={200}/>
+        <img className="logo" src="src/assets/logo.png" width={150}/>
         <ul>
           <li><a className='nav-item' href="#home">About</a></li>
-          <li><a className='nav-item' href="#about">How</a></li>
+          <li><a className='nav-item' href="#about">Overview</a></li>
           <li className="main"><Link to="/Login">Submit Now</Link></li>
         </ul>
       </div>
