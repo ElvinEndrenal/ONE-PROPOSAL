@@ -4,7 +4,6 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-
     <div>
       <div className="navbar">
       <input type="checkbox" id="check"/>
@@ -13,9 +12,9 @@ const Navbar = () => {
         </label>
         <img className="logo" src="src/assets/logo.png" width={200}/>
         <ul>
-        <li><a className='nav-item' href="#home">About</a></li>
-        <li><a className='nav-item' href="#about">How</a></li>
-        <li className="main"><Link to="/Login">Submit Now</Link></li>
+          <li><a className='nav-item' href="#home">About</a></li>
+          <li><a className='nav-item' href="#about">How</a></li>
+          <li className="main"><Link to="/Login">Submit Now</Link></li>
         </ul>
       </div>
     </div>

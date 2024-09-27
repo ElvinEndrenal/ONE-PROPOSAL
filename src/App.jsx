@@ -11,6 +11,7 @@ const App = () => {
     <Router>
       <div>
         <Routes>
+          
           <Route path="/" element={
             <>
               <Navbar />
@@ -19,7 +20,13 @@ const App = () => {
               <Card_About />
             </>
           } />
-          <Route path="/login" element={<LogIn />} /> {/* goes to the LogIn&SignUp page */}
+          
+          <Route path="/Login" element={
+            <LogIn /> 
+            } /> 
+
+            
+
         </Routes>
       </div>
     </Router>
