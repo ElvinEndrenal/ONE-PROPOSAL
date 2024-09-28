@@ -61,7 +61,7 @@ const LogIn = () => {
         // PHASE 1: Validate username format
         const pascalCaseRegex = /^[A-Z][a-z]+(?:[A-Z][a-z]+)*$/;
         if (!usernameInput.match(pascalCaseRegex)) {
-            alert("Username must be in Pascal Case (e.g., JohnDoe).");
+            alert("Username must be in Pascal Case (e.g., JohnElvin).");
             return;
         }
 

@@ -7,6 +7,7 @@ import Card_About from './Components/Card_About/Card';
 import LogIn from './Components/Pages/LogIn/LogIn';
 import Commitment from './Components/Commitment/Commitment';
 import Footer from './Components/Footer/Footer';
+import Dashboard from './Components/Pages/Dashboard/Dashboard';
 
 const App = () => {
   return (
@@ -18,9 +19,9 @@ const App = () => {
             <>
               <Navbar />
               <Home />
-              <Commitment />
               <About />
               <Card_About />
+              <Commitment />
               <Footer />
             </>
           } />
@@ -29,7 +30,9 @@ const App = () => {
             <LogIn /> 
             } /> 
 
-            
+          <Route path="/Dashboard" element={
+            <Dashboard /> 
+            } /> 
 
         </Routes>
       </div>
