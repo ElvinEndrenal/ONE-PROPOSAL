@@ -7,6 +7,8 @@ import Card_About from './Components/Card_About/Card';
 import LogIn from './Components/Pages/LogIn/LogIn';
 import Commitment from './Components/Commitment/Commitment';
 import Footer from './Components/Footer/Footer';
+import StudentMain from './Components/Pages/Main/Student_Interface/StudentMain';
+import TeacherMain from './Components/Pages/Main/Teacher_Interface/TeacherMain';
 
 const App = () => {
   return (
@@ -18,18 +20,16 @@ const App = () => {
             <>
               <Navbar />
               <Home />
-              <Commitment />
               <About />
               <Card_About />
+              <Commitment />
               <Footer />
             </>
           } />
           
-          <Route path="/Login" element={
-            <LogIn /> 
-            } /> 
-
-            
+          <Route path="/Login" element={<LogIn />} /> 
+          <Route path="/StudentMain" element={<StudentMain />} />
+          <Route path="/TeacherMain" element={<TeacherMain />} />
 
         </Routes>
       </div>

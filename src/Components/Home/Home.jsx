@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className='home-layer'>
       <section id="home" className="home-section">
-        <h2><span>Empower</span> Your Cause Together</h2>
+        <h2><span>Turn It In</span> Without a Paper!</h2>
         <p>
             Online Netpage Environment (ONE) is focused on making it easier for people to submit proposals online. 
             Our platform will help users interact better and improve the submission process, 

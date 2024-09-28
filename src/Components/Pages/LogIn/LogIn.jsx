@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { useNavigate } from 'react-router-dom';
 import './LogIn.css';
 
 const LogIn = () => {
@@ -13,21 +14,21 @@ const LogIn = () => {
     const studentInDB = ref(database, "student");
     const teacherInDB = ref(database, "teacher");
 
+    const navigate = useNavigate(); // Hook for navigation
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     useEffect(() => {
         // Function to switch from LOG-IN to SIGN-IN
         const goToSignIn = () => {
-            const LogInBox = document.getElementById("regisBox");
-            LogInBox.style.display = "none";
-            const SignInBox = document.getElementById("regisBox2");
-            SignInBox.style.display = "block";
+            document.getElementById("regisBox").style.display = "none";
+            document.getElementById("regisBox2").style.display = "block";
         };
 
         // Function to switch from SIGN-IN to LOG-IN
         const backToLogin = () => {
-            const SignInBox = document.getElementById("regisBox2");
-            SignInBox.style.display = "none";
-            const LogInBox = document.getElementById("regisBox");
-            LogInBox.style.display = "block";
+            document.getElementById("regisBox2").style.display = "none";
+            document.getElementById("regisBox").style.display = "block";
         };
 
         // Attach click event handlers
@@ -40,6 +41,38 @@ const LogIn = () => {
             document.getElementById("backToLogin").onclick = null;
         };
     }, []);
+
+    // Function to handle login
+    const handleLogin = async () => {
+        const studentSnapshot = await get(studentInDB);
+        const teacherSnapshot = await get(teacherInDB);
+
+        let userFound = false;
+
+        // Check in student database
+        studentSnapshot.forEach(childSnapshot => {
+            const userData = childSnapshot.val();
+            if (userData.email === email && userData.password === password) {
+                userFound = true;
+                navigate('/StudentMain'); // Redirect to StudentMain
+            }
+        });
+
+        // Check in teacher database if not found in student
+        if (!userFound) {
+            teacherSnapshot.forEach(childSnapshot => {
+                const userData = childSnapshot.val();
+                if (userData.email === email && userData.password === password) {
+                    userFound = true;
+                    navigate('/TeacherMain'); // Redirect to TeacherMain
+                }
+            });
+        }
+
+        if (!userFound) {
+            alert("Invalid email or password.");
+        }
+    };
 
     // Function to handle SIGN-IN button click
     const handleSignIn = () => {
@@ -95,7 +128,7 @@ const LogIn = () => {
             password: passwordInput,
             occupation: selectedOccupation
         });
-        alert("CREATED ACCOUNT");
+        alert("Account Created");
     };
 
     return (
@@ -109,18 +142,22 @@ const LogIn = () => {
                         className="fontStyle1 fontSizeL textBox mt"
                         type="text"
                         placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     /><br />
                     <input
                         className="fontStyle1 fontSizeL textBox mt"
                         type="password"
                         placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                     <br /><br /><br />
-                    <button className="fontStyle1 button">LOGIN</button>
-                    <p
-                        className="fontStyle1 fontSizeM fontColor1"
-                        id="goToSignIn"
-                    >
+                    <button className="fontStyle1 button" onClick={handleLogin}>
+                        LOGIN
+                    </button>
+
+                    <p className="fontStyle1 fontSizeM fontColor1" id="goToSignIn">
                         Create Account
                     </p>
                 </div>
@@ -129,72 +166,46 @@ const LogIn = () => {
             {/* SIGN-IN SECTION */}
             <center>
                 <div id="regisBox2" style={{ display: 'none' }}>
-
                     <p className="fontStyle1 fontColor1 headLogin">SIGN-IN</p>
-
                     <input
                         className="fontStyle1 fontSizeL textBox mt"
                         id="usernameTextBox"
                         type="text"
                         placeholder="Create Username"
                     /><br />
-
                     <input
                         className="fontStyle1 fontSizeL textBox mt"
                         id="emailTextBox"
                         type="text"
                         placeholder="Create Email"
                     /><br />
-
                     <input
                         className="fontStyle1 fontSizeL textBox mt"
                         id="passwordTextBox"
                         type="password"
                         placeholder="Create Password"
-                    />
-                    <br />
-
+                    /><br />
                     <input
                         className="fontStyle1 fontSizeL textBox mt"
                         id="confirmPasswordTextBox"
                         type="password"
                         placeholder="Confirm Password"
-                    />
-
-                    <br /><br />
-
+                    /><br /><br />
                     <input type="radio" id="student" name="occupation" value="student" />
                     <label className="fontStyle1 fontSizeL"> Student </label>
                     <input type="radio" id="teacher" name="occupation" value="teacher" />
                     <label className="fontStyle1 fontSizeL"> Teacher </label>
                     <br /><br />
-
-                    {/* <label for="club">Club</label>
-                    <select id="clubs" name="club">
-                        <option value="cops">Club of Programmers</option>
-                        <option value="prestige">Prestige Club</option>
-                        <option value="fil-tura">Fil-Tura Klub</option>
-                        <option value="rcy">Red Cross Youth Council</option>
-                        <option value="sci-pi">Sci-Pi</option>
-                        <option value="ofam">Organization of Future Accountants and Manager</option>
-                        <option value="sipnayan">Sipnayan Society</option>
-                        <option value="act">Alliance of Chefs and Travelers</option>
-                    </select>
-                    <br /> <br /> */}
-
                     <button
                         className="fontStyle1 button"
                         onClick={handleSignIn}
                     >
                         SIGN IN
                     </button>
-                    <p
-                        className="fontStyle1 fontSizeM fontColor1"
-                        id="backToLogin"
-                    >
+                    <p className="fontStyle1 fontSizeM fontColor1" id="backToLogin">
                         Already have an Account
                     </p>
-                </div>
+                </div>  
             </center>
 
             {/* Images */}
