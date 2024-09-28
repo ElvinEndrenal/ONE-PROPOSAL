@@ -20,4 +20,21 @@
     box-sizing: border-box;
     display: flex;                
     align-items: center; 
+    background-image: url(./s2.png);
+    background-size: cover; /* Ensure the image covers the entire card */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+}
+
+.card1{
+    background-image: url(../../assets/s1.png);
+}
+.card2{
+    background-image: url(../../assets/s2.png);
+}
+.card3{
+    background-image: url(../../assets/s3.png);
+}
+.card4{
+    background-image: url(../../assets/s4.png);
 }

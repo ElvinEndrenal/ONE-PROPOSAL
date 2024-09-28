@@ -6,6 +6,11 @@
 
 
 /* FONT STYLE */
+.fontStyleNav {
+    font-family: 'Arial', sans-serif; /* Include a fallback font */
+    font-weight: lighter;
+}
+
 .fontStyle1{
     font-family: Arial;
 }
@@ -32,3 +37,4 @@
 .fontSizeM{
     font-size: medium;   
 }
+
