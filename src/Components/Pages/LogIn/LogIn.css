@@ -29,7 +29,6 @@
 }
 
 
-
 .mt{
     margin-top: 30px;
 }
@@ -43,17 +42,16 @@
 }
 
 .button{
-    width: 45%;
+    width: 200px;
     height: 50px;
     border: none;
     background-color: var(--blue);
     color:var(--white);
     border-radius: 15px;
+    cursor: pointer;
 }
 
 /* -------------------------- */
-
-
 
 
 #background {
@@ -86,7 +84,7 @@
     display: block;
     position: absolute;
     width: 400px;
-    height: 450px;
+    height: 420px;
     padding-top: 20px;
     background-color: rgb(255, 255, 255);
     top: 50%;
@@ -96,6 +94,7 @@
     opacity: 0.60;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
+
 #head{
     margin-top: 10px;
 }
@@ -104,7 +103,7 @@
     font-size: 35px;
 }
 .subLogin{
-    margin-top: -10px;
+    margin-top: 20px;
 }
 
 /* TEXTBOX */
@@ -118,12 +117,13 @@
     border-radius: 15px;
 }
 
+
 /* SIGNIN CONTAINER */
 #regisBox2{ 
     display: none;
     position: absolute;
-    width: 400px;
-    height: 450px;
+    width: 700px;
+    height: 570px;
     padding-top: 20px;
     background-color: rgb(255, 255, 255);
     top: 50%;
@@ -133,6 +133,22 @@
     opacity: 0.60;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 
+}
+
+#usernameTextBox{
+    width: 400px;
+}
+
+#emailTextBox{
+    width: 400px;
+}
+
+#passwordTextBox{
+    width: 400px;
+}
+
+#confirmPasswordTextBox{
+    width: 400px;
 }
 
 
@@ -153,10 +169,6 @@
     text-decoration: underline;
     cursor: pointer;
 }
-
-
-
-
 
 
 /* RESPONSIVE */
