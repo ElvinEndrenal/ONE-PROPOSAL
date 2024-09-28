@@ -170,11 +170,15 @@ const LogIn = () => {
                     <br /><br />
 
                     {/* <label for="club">Club</label>
-                    <select id="club" name="club">
-                        <option value="apple">Cops</option>
-                        <option value="banana">Prestige</option>
-                        <option value="cherry">OFAM</option>
-                        <option value="date">Sci Pi</option>
+                    <select id="clubs" name="club">
+                        <option value="cops">Club of Programmers</option>
+                        <option value="prestige">Prestige Club</option>
+                        <option value="fil-tura">Fil-Tura Klub</option>
+                        <option value="rcy">Red Cross Youth Council</option>
+                        <option value="sci-pi">Sci-Pi</option>
+                        <option value="ofam">Organization of Future Accountants and Manager</option>
+                        <option value="sipnayan">Sipnayan Society</option>
+                        <option value="act">Alliance of Chefs and Travelers</option>
                     </select>
                     <br /> <br /> */}
 
