@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import './TeacherMain.css'
 import '../../root.css'
 
@@ -41,6 +42,9 @@ const Bell2=()=>(
 
 
 function TeacherMain() {
+
+  const navigate = useNavigate(); // useNavigate hook
+
   return (
     <div>
         
@@ -72,7 +76,10 @@ function TeacherMain() {
         <p className="fontStyle1 fontColor1 head head2">Online Netpage 
                                               <br/>Environment <font class="head2_2" >&nbsp;(ONE)&nbsp;</font></p>
         <p className="fontStyle1 fontColor2 head head3">This platform is designed to create a seamless experience for users, facilitating smoother interactions and expediting the overall submission workflow.</p>
-        <button className="fontStyle1" id="button">Review Proposal</button>
+        
+        <button className="fontStyle1" id="button" onClick={() => navigate("/TeacherReview")}>
+            Review Proposal
+        </button>
         
       </div>
 

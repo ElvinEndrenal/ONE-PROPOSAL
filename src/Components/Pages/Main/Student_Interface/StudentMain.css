@@ -148,6 +148,7 @@
     border: none;
     border-radius: 10px;
     letter-spacing: -0.5px;
+    cursor: pointer;
 }
 
 #imgRight {
@@ -217,6 +218,7 @@
         border: none;
         border-radius: 10px;
         letter-spacing: -0.5px;
+        cursor: pointer;
     }
     
     #imgRight {

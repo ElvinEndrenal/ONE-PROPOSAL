@@ -64,7 +64,6 @@ const LogIn = () => {
                 const userData = childSnapshot.val();
                 if (userData.email === email && userData.password === password) {
                     userFound = true;
-                    navigate('/TeacherMain'); // Redirect to TeacherMain
                 }
             });
         }
