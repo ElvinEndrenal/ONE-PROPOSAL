@@ -47,8 +47,6 @@ function TeacherMain() {
 
   return (
     <div>
-        
-
       <div id="leftNav">
         <br/>
           <div  id="logo">
