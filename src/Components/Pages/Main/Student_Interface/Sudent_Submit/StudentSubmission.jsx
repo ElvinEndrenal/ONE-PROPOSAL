@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './StudentSubmission.css'
 
 
@@ -11,7 +12,7 @@ const DashboardIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 960 960" width="24px" fill="#c4c5c7"><path d="M240-200h133.85v-237.69h212.3V-200H720v-360L480-740.77 240-560v360Zm-60 60v-450l300-225.77L780-590v450H526.15v-237.69h-92.3V-140H180Zm300-330.38Z"/></svg>
   );
   const ActivityIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 960 960" width="24px" fill="#008cff"><path d="M212.31-100Q182-100 161-121q-21-21-21-51.31v-535.38Q140-738 161-759q21-21 51.31-21h55.38v-84.61h61.54V-780h303.08v-84.61h60V-780h55.38Q778-780 799-759q21 21 21 51.31v535.38Q820-142 799-121q-21 21-51.31 21H212.31Zm0-60h535.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-375.38H200v375.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM200-607.69h560v-100q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v100Zm0 0V-720v112.31Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 990 990" width="24px" fill="#008cff"><path d="M212.31-100Q182-100 161-121q-21-21-21-51.31v-535.38Q140-738 161-759q21-21 51.31-21h55.38v-84.61h61.54V-780h303.08v-84.61h60V-780h55.38Q778-780 799-759q21 21 21 51.31v535.38Q820-142 799-121q-21 21-51.31 21H212.31Zm0-60h535.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-375.38H200v375.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM200-607.69h560v-100q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v100Zm0 0V-720v112.31Z"/></svg>
   );
   const ActivityIconU = () => (
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 990 990" width="24px" fill="#c4c5c7"><path d="M212.31-100Q182-100 161-121q-21-21-21-51.31v-535.38Q140-738 161-759q21-21 51.31-21h55.38v-84.61h61.54V-780h303.08v-84.61h60V-780h55.38Q778-780 799-759q21 21 21 51.31v535.38Q820-142 799-121q-21 21-51.31 21H212.31Zm0-60h535.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-375.38H200v375.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM200-607.69h560v-100q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v100Zm0 0V-720v112.31Z"/></svg>
@@ -40,7 +41,17 @@ const DashboardIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="40px" fill="#434343"><path d="M234.97-258.15q56.95-38.26 116.33-59.23 59.37-20.98 128.7-20.98 69.33 0 128.91 20.98 59.58 20.97 116.53 59.23 41.51-47.36 62.91-102.77 21.39-55.41 21.39-119.08 0-138.69-95.52-234.22-95.53-95.52-234.22-95.52t-234.22 95.52Q150.26-618.69 150.26-480q0 63.67 21.6 119.08t63.11 102.77Zm244.91-196.72q-54.24 0-91.32-37.2-37.07-37.2-37.07-91.44 0-54.23 37.2-91.31 37.2-37.08 91.43-37.08 54.24 0 91.32 37.2 37.07 37.2 37.07 91.44 0 54.23-37.2 91.31-37.2 37.08-91.43 37.08ZM479.73-100q-78.99 0-148.43-29.77-69.43-29.77-120.8-81.41-51.37-51.64-80.93-120.75Q100-401.04 100-480.33q0-79.04 29.77-148.28t81.41-120.54q51.64-51.31 120.75-81.08Q401.04-860 480.33-860q79.04 0 148.28 29.77t120.54 81.08q51.31 51.3 81.08 120.65Q860-559.15 860-480.18q0 79.24-29.77 148.3-29.77 69.06-81.08 120.7-51.3 51.64-120.74 81.41Q558.98-100 479.73-100Z"/></svg>
     );
 
+
+
+    
 function StudentSubmission() {
+
+  const navigate = useNavigate(); // useNavigate hook
+
+  const handleClick = () => {
+    navigate('/StudentMain'); // Nav
+  };
+  
 
   return (
     <div>
@@ -51,12 +62,34 @@ function StudentSubmission() {
           </div>
           <br/> <br/><br/> <br/> <br/><br/>
           <ul className="fontStyleNav fontSize1" id="navList" itemType="none">
-            <li className=" navList1" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DashboardIcon /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</font></li>
-            <li className=" navList2" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ActivityIconU /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font></li>
+            <li className="navList2" id="navList" onClick={handleClick}>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <ActivityIconU />
+              <font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</font>
+            </li>
+            <li className=" navList1" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ActivityIcon /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font></li>
           </ul>
       </div>
+
+      <div> 
+      <div id="rightNav">
+        <center>
+              <iframe
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FManila&bgcolor=%23ffffff&showTitle=0&src=ZW5kcmVuYWxlbHZpbkBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4tZ2IucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333ae06&color=%23be0300&color=%23b8b8b8&color=%230083c6"
+              style={{ border: 'solid 1px #777' }}
+              width="800"
+              height="600"
+              frameBorder="0"
+              scrolling="no"
+              title="Google Calendar"
+            />
+        </center>
+      </div>
+      </div>
+
     </div>
   )
+  
 }
 
 export default StudentSubmission

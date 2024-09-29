@@ -44,6 +44,10 @@ function StudentMain() {
 
   const navigate = useNavigate(); // useNavigate hook
 
+  const handleClick = () => {
+    navigate('/StudentSubmission'); // Nav
+  };
+
   return (
     <div>
         
@@ -56,7 +60,11 @@ function StudentMain() {
           <br/> <br/><br/> <br/> <br/><br/>
           <ul className="fontStyleNav fontSize1" id="navList" itemType="none">
             <li className=" navList1" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DashboardIcon /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</font></li>
-            <li className=" navList2" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ActivityIconU /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font></li>
+            <li className="navList2" id="navList" onClick={handleClick}>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <ActivityIconU />
+              <font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font>
+            </li>
           </ul>
 
       </div>
@@ -77,7 +85,7 @@ function StudentMain() {
         <p className="fontStyle1 fontColor2 head head3">This platform is designed to create a seamless experience for users, facilitating smoother interactions and expediting the overall submission workflow.</p>
         
         
-        <button className="fontStyle1" id="button" onClick={() => navigate("/StudentSubmission")}>
+        <button className="fontStyle1" id="button"> 
             Submit Here
         </button>
         

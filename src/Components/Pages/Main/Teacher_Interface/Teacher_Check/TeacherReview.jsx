@@ -1,4 +1,6 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import './TeacherReview.css'
 
 
 const DashboardIcon = () => (
@@ -8,7 +10,7 @@ const DashboardIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 960 960" width="24px" fill="#c4c5c7"><path d="M240-200h133.85v-237.69h212.3V-200H720v-360L480-740.77 240-560v360Zm-60 60v-450l300-225.77L780-590v450H526.15v-237.69h-92.3V-140H180Zm300-330.38Z"/></svg>
     );
     const ActivityIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 960 960" width="24px" fill="#008cff"><path d="M212.31-100Q182-100 161-121q-21-21-21-51.31v-535.38Q140-738 161-759q21-21 51.31-21h55.38v-84.61h61.54V-780h303.08v-84.61h60V-780h55.38Q778-780 799-759q21 21 21 51.31v535.38Q820-142 799-121q-21 21-51.31 21H212.31Zm0-60h535.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-375.38H200v375.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM200-607.69h560v-100q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v100Zm0 0V-720v112.31Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 990 990" width="24px" fill="#008cff"><path d="M212.31-100Q182-100 161-121q-21-21-21-51.31v-535.38Q140-738 161-759q21-21 51.31-21h55.38v-84.61h61.54V-780h303.08v-84.61h60V-780h55.38Q778-780 799-759q21 21 21 51.31v535.38Q820-142 799-121q-21 21-51.31 21H212.31Zm0-60h535.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-375.38H200v375.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM200-607.69h560v-100q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v100Zm0 0V-720v112.31Z"/></svg>
     );
     const ActivityIconU = () => (
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -1100 990 990" width="24px" fill="#c4c5c7"><path d="M212.31-100Q182-100 161-121q-21-21-21-51.31v-535.38Q140-738 161-759q21-21 51.31-21h55.38v-84.61h61.54V-780h303.08v-84.61h60V-780h55.38Q778-780 799-759q21 21 21 51.31v535.38Q820-142 799-121q-21 21-51.31 21H212.31Zm0-60h535.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-375.38H200v375.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM200-607.69h560v-100q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v100Zm0 0V-720v112.31Z"/></svg>
@@ -39,6 +41,13 @@ const DashboardIcon = () => (
 
 
 function TeacherReview() {
+
+  const navigate = useNavigate(); // useNavigate hook
+
+  const handleClick = () => {
+    navigate('/TeacherMain'); // Nav
+  };
+
   return (
     <div>
         <div id="leftNav">
@@ -48,9 +57,28 @@ function TeacherReview() {
           </div>
           <br/> <br/><br/> <br/> <br/><br/>
           <ul className="fontStyleNav fontSize1" id="navList" itemType="none">
-            <li className=" navList1" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DashboardIcon /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</font></li>
-            <li className=" navList2" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ActivityIconU /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font></li>
+          <li className="navList2" id="navList" onClick={handleClick}>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <ActivityIconU />
+              <font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</font>
+            </li>
+            <li className=" navList1" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ActivityIcon /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font></li>
           </ul>
+      </div>
+
+
+      <div id="rightNav">
+        <center>
+              <iframe
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FManila&bgcolor=%23ffffff&showTitle=0&src=ZW5kcmVuYWxlbHZpbkBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4tZ2IucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333ae06&color=%23be0300&color=%23b8b8b8&color=%230083c6"
+              style={{ border: 'solid 1px #777' }}
+              width="800"
+              height="600"
+              frameBorder="0"
+              scrolling="no"
+              title="Google Calendar"
+            />
+        </center>
       </div>
     </div>
   )

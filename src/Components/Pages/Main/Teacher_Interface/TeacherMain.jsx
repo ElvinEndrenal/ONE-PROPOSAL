@@ -45,6 +45,10 @@ function TeacherMain() {
 
   const navigate = useNavigate(); // useNavigate hook
 
+  const handleClick = () => {
+    navigate('/TeacherReview'); // Nav
+  };
+
   return (
     <div>
       <div id="leftNav">
@@ -55,7 +59,11 @@ function TeacherMain() {
           <br/> <br/><br/> <br/> <br/><br/>
           <ul className="fontStyleNav fontSize1" id="navList" itemType="none">
             <li className=" navList1" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DashboardIcon /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</font></li>
-            <li className=" navList2" id="navList">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ActivityIconU /><font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font></li>
+            <li className="navList2" id="navList" onClick={handleClick}>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <ActivityIconU />
+              <font className="nav1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</font>
+            </li>
           </ul>
 
       </div>
@@ -75,7 +83,7 @@ function TeacherMain() {
                                               <br/>Environment <font class="head2_2" >&nbsp;(ONE)&nbsp;</font></p>
         <p className="fontStyle1 fontColor2 head head3">This platform is designed to create a seamless experience for users, facilitating smoother interactions and expediting the overall submission workflow.</p>
         
-        <button className="fontStyle1" id="button" onClick={() => navigate("/TeacherReview")}>
+        <button className="fontStyle1" id="button">
             Review Proposal
         </button>
         
