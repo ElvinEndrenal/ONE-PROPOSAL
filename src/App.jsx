@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Card_About from './Components/Card_About/Card';
-import LogIn from './Components/Pages/LogIn/LogIn';
+// import LogIn from './Components/Pages/LogIn/LogIn';
 import Commitment from './Components/Commitment/Commitment';
 import Footer from './Components/Footer/Footer';
 // import StudentMain from './Components/Pages/Main/Student_Interface/StudentMain';
