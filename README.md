@@ -3,8 +3,8 @@
 - Status: Working...
 
 # Maintainers:
-- John Elvin S. Endrenal (Fullstack)
-- John Nesty D. Bautista (Fullstack)
+- John Elvin S. Endrenal
+- John Nesty D. Bautista
 
 # Tools to Use: 
 
