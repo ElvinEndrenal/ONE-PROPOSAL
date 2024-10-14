@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; 
-import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Card_About from './components/Card_About/Card';
-// import LogIn from './components/Pages/LogIn/LogIn';
-import Commitment from './components/Commitment/Commitment';
-import Footer from './components/Footer/Footer';
+import Navbar from './components/navbar/Navbar';
+import Home from './components/home/Home';
+import About from './components/about/About';
+import Card_About from './components/card/Card';
+// import LogIn from './components/pages/login/LogIn';
+import Commitment from './components/commitment/Commitment';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
