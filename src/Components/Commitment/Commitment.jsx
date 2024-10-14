@@ -1,7 +1,7 @@
 import React from 'react'
 import './Commitment.css'
 
-function Commitment() {
+const Commitment = () => {
   return (
     <div className="commmitment-layer">
       <section id="commitment" className="commitment-section">

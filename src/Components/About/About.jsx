@@ -1,7 +1,7 @@
 import React from 'react'
 import "./About.css"
 
-function About() {
+const About = () => {
   return (
     <div className='about-layer'>
         <section id="about" className="about-section">

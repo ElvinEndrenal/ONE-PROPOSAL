@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Home.css"
 
-function Home() {
+const Home = () => {
   return (
     <div className='home-layer'>
       <section id="home" className="home-section">
